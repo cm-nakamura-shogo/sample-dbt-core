@@ -23,6 +23,9 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+vars:
+  truncate_timespan_to: "{{ current_timestamp() }}"
+
 seeds:
   jaffle_shop:
     +schema: jaffle_shop_raw
