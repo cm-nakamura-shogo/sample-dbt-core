@@ -21,3 +21,13 @@ models:
               field: customer_id
               config:
                 tags: 'test_relationship'
+      - name: order_total
+        tests:
+          - is_plus:
+              config:
+                tags: 'test_is_plus'
+      - name: tax_paid
+        tests:
+          - is_plus:
+              config:
+                tags: 'test_is_plus'
