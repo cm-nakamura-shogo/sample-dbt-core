@@ -7,3 +7,17 @@ models:
         tests:
           - not_null
           - unique
+      - name: location_id
+        tests:
+          - relationships:
+              to: ref('stg_locations')
+              field: location_id
+              config:
+                tags: 'test_relationship'
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+              config:
+                tags: 'test_relationship'

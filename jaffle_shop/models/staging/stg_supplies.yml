@@ -10,3 +10,10 @@ models:
         tests:
           - not_null
           - unique
+      - name: product_id
+        tests:
+          - relationships:
+              to: ref('stg_products')
+              field: product_id
+              config:
+                tags: 'test_relationship'
